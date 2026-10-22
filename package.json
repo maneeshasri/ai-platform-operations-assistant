@@ -6,9 +6,21 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "typescript": "^5.9.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maneeshasri/ai-platform-operations-assistant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maneeshasri/ai-platform-operations-assistant/issues"
+  },
+  "homepage": "https://github.com/maneeshasri/ai-platform-operations-assistant#readme"
 }
