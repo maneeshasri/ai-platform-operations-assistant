@@ -9,6 +9,7 @@
     "start": "tsc && node dist/index.js"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "typescript": "^5.9.3"
   },
   "repository": {
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/maneeshasri/ai-platform-operations-assistant/issues"
   },
-  "homepage": "https://github.com/maneeshasri/ai-platform-operations-assistant#readme"
+  "homepage": "https://github.com/maneeshasri/ai-platform-operations-assistant#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
 }
