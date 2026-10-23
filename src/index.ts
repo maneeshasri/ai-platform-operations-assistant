@@ -1,11 +1,13 @@
 
 import express from "express";
 import healthRouter from "./routes/health";
+import incidentsRouter from "./routes/incidents";
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+
 
 app.get("/", (_req, res) => {
   res.status(200).json({
@@ -15,6 +17,7 @@ app.get("/", (_req, res) => {
 });
 
 app.use("/health", healthRouter);
+app.use("/incidents", incidentsRouter);
 
 app.listen(port, () => {
   console.log(
