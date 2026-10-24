@@ -3,6 +3,10 @@
         "npm run build": true,
         "npm.cmd": true,
         "git remote": true,
-        "git config": true
+        "git config": true,
+        "/^node -e \"console\\.log\\(require\\.resolve\\('express'\\)\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
     }
 }

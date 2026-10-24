@@ -19,15 +19,25 @@ router.get("/", (_req: Request, res: Response) => {
 router.post("/", (req: Request, res: Response) => {
   const { title, severity, service, description } = req.body ?? {};
  
-  if (typeof title !== "string" || 
-    title.trim().length === 0 || 
-    typeof service !== "string" ||
-    service.trim().length === 0 ||
-    typeof description !== "string" ||
-    description.trim().length === 0) {
-     res.status(400).json({ error: "title, service and description must be non-empty strings" });
-return;
-    }
+  
+if (typeof title !== "string" || title.trim().length === 0) {
+  return res.status(400).json({
+    error: "title must be a non-empty string"
+  });
+}
+
+if (typeof service !== "string" || service.trim().length === 0) {
+  return res.status(400).json({
+    error: "service must be a non-empty string"
+  });
+}
+
+if (typeof description !== "string" || description.trim().length === 0) {
+  return res.status(400).json({
+    error: "description must be a non-empty string"
+  });
+}
+
     if( typeof severity !== "string" || 
         !validSeverities.includes(severity as IncidentSeverity)
     ) {

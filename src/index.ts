@@ -2,8 +2,8 @@
 import express from "express";
 import healthRouter from "./routes/health";
 import incidentsRouter from "./routes/incidents";
+import app from "./app";
 
-const app = express();
 const port = 3000;
 
 app.use(express.json());
